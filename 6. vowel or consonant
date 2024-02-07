@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cctype>
+
+int main() {
+    char character;
+
+    std::cout << "Enter a character: ";
+    std::cin >> character;
+
+    // Convert the character to lowercase
+    char lowercaseChar = std::tolower(character);
+
+    // Check if the lowercase character is a vowel or consonant
+    switch (lowercaseChar) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            std::cout << character << " is a vowel." << std::endl;
+            break;
+        default:
+            std::cout << character << " is a consonant." << std::endl;
+            break;
+    }
+
+    return 0;
+}
