@@ -1,0 +1,18 @@
+#include <iostream>
+
+double celsiusToFahrenheit(double celsius) {
+    return (celsius * 9.0 / 5.0) + 32.0;
+}
+
+int main() {
+    double celsius, fahrenheit;
+
+    std::cout << "Enter temperature in Celsius: ";
+    std::cin >> celsius;
+
+    fahrenheit = celsiusToFahrenheit(celsius);
+
+    std::cout << "Equivalent temperature in Fahrenheit: " << fahrenheit << std::endl;
+
+    return 0;
+}
