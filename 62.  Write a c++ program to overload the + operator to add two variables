@@ -1,0 +1,37 @@
+#include <iostream>
+
+class Adder {
+private:
+    int value;
+
+public:
+    // Constructor
+    Adder(int initialValue) : value(initialValue) {
+    }
+
+    // Overloading the + operator as a member function
+    Adder operator+(const Adder& other) const {
+        // Addition operation
+        return Adder(value + other.value);
+    }
+
+    // Function to get the current value
+    int getValue() const {
+        return value;
+    }
+};
+
+int main() {
+    Adder firstAdder(5);
+    Adder secondAdder(10);
+
+    std::cout << "First Adder value: " << firstAdder.getValue() << std::endl;
+    std::cout << "Second Adder value: " << secondAdder.getValue() << std::endl;
+
+    // Using the overloaded + operator
+    Adder result = firstAdder + secondAdder;
+
+    std::cout << "Result of addition: " << result.getValue() << std::endl;
+
+    return 0;
+}
