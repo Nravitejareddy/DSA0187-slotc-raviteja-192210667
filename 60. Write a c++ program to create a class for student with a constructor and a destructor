@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+
+class Student {
+private:
+    std::string name;
+    int age;
+    double gpa;
+
+public:
+    // Constructor
+    Student(const std::string& studentName, int studentAge, double studentGPA) : name(studentName), age(studentAge), gpa(studentGPA) {
+        std::cout << "A new student object is created: " << name << ", Age: " << age << ", GPA: " << gpa << std::endl;
+    }
+
+    // Destructor
+    ~Student() {
+        std::cout << "The student object is being destroyed: " << name << ", Age: " << age << ", GPA: " << gpa << std::endl;
+    }
+
+    // Function to display student information
+    void displayStudentInfo() {
+        std::cout << "Student: " << name << ", Age: " << age << ", GPA: " << gpa << std::endl;
+    }
+};
+
+int main() {
+    // Create a Student object
+    Student myStudent("John Doe", 20, 3.5);
+
+    // Display student information
+    myStudent.displayStudentInfo();
+
+    // The destructor will be automatically called when the program ends or when the object goes out of scope
+
+    return 0;
+}
