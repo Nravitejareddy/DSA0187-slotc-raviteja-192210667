@@ -1,0 +1,41 @@
+#include <iostream>
+
+class Rectangle {
+private:
+    double length;
+    double width;
+
+public:
+    // Constructor
+    Rectangle(double l, double w) : length(l), width(w) {
+        std::cout << "Rectangle object is created with length = " << length << " and width = " << width << std::endl;
+    }
+
+    // Destructor
+    ~Rectangle() {
+        std::cout << "Rectangle object is being destroyed." << std::endl;
+    }
+
+    // Function to calculate the area of the rectangle
+    double calculateArea() {
+        return length * width;
+    }
+
+    // Function to display rectangle information
+    void displayRectangleInfo() {
+        std::cout << "Rectangle with length = " << length << " and width = " << width << std::endl;
+        std::cout << "Area: " << calculateArea() << std::endl;
+    }
+};
+
+int main() {
+    // Create a Rectangle object
+    Rectangle myRectangle(5.0, 10.0);
+
+    // Display rectangle information
+    myRectangle.displayRectangleInfo();
+
+    // The destructor will be automatically called when the program ends or when the object goes out of scope
+
+    return 0;
+}
