@@ -1,0 +1,38 @@
+#include <iostream>
+
+class MyClass {
+private:
+    int value;
+
+public:
+    // Constructor
+    MyClass(int initValue) : value(initValue) {
+    }
+
+    // Overloading the += operator as a member function
+    MyClass& operator+=(const MyClass& other) {
+        // Addition operation
+        value += other.value;
+        return *this;  // Return the updated object
+    }
+
+    // Function to get the current value
+    int getValue() const {
+        return value;
+    }
+};
+
+int main() {
+    MyClass obj1(5);
+    MyClass obj2(10);
+
+    std::cout << "Initial value of obj1: " << obj1.getValue() << std::endl;
+    std::cout << "Initial value of obj2: " << obj2.getValue() << std::endl;
+
+    // Using the overloaded += operator
+    obj1 += obj2;
+
+    std::cout << "After += operation: " << obj1.getValue() << std::endl;
+
+    return 0;
+}
