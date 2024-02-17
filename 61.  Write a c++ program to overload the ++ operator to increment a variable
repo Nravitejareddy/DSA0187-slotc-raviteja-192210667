@@ -1,0 +1,36 @@
+#include <iostream>
+
+class Incrementer {
+private:
+    int value;
+
+public:
+    // Constructor
+    Incrementer(int initialValue) : value(initialValue) {
+    }
+
+    // Overloading the ++ operator as a member function
+    Incrementer& operator++() {
+        // Pre-increment operation
+        ++value;
+        return *this; // Return the updated object
+    }
+
+    // Function to get the current value
+    int getValue() const {
+        return value;
+    }
+};
+
+int main() {
+    Incrementer myIncrementer(5);
+
+    std::cout << "Initial value: " << myIncrementer.getValue() << std::endl;
+
+    // Using the overloaded ++ operator
+    ++myIncrementer;
+
+    std::cout << "After incrementing: " << myIncrementer.getValue() << std::endl;
+
+    return 0;
+}
