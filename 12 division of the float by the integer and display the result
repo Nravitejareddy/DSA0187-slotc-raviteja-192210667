@@ -1,0 +1,18 @@
+#include <iostream>
+
+int main() {
+    int intValue;
+    float floatValue;
+
+    std::cout << "Enter an integer: ";
+    std::cin >> intValue;
+
+    std::cout << "Enter a float: ";
+    std::cin >> floatValue;
+
+    float result = floatValue / intValue;
+
+    std::cout << "Result of float divided by integer: " << result << std::endl;
+
+    return 0;
+}
