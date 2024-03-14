@@ -1,0 +1,17 @@
+#include <iostream>
+
+int main() {
+    
+    int myInt = 10;
+    std::cout << "Integer: " << myInt << std::endl;
+
+    
+    float myFloat = 3.14f;
+    std::cout << "Float: " << myFloat << std::endl;
+
+    
+    char myChar = 'A';
+    std::cout << "Character: " << myChar << std::endl;
+
+    return 0;
+}
