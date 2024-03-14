@@ -1,0 +1,20 @@
+#include <iostream>
+
+int main() {
+    double num1, num2, num3, max;
+
+    std::cout << "Enter three numbers: ";
+    std::cin >> num1 >> num2 >> num3;
+
+    max = num1;
+    if (num2 > max) {
+        max = num2;
+    }
+    if (num3 > max) {
+        max = num3;
+    }
+
+    std::cout << "The maximum of the three numbers is: " << max << std::endl;
+
+    return 0;
+}
