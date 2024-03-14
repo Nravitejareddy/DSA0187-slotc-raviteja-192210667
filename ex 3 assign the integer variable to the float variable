@@ -1,0 +1,9 @@
+#include <iostream>
+
+int main() {
+    int myInt = 10;
+    float myFloat = myInt; 
+    std::cout << "Integer: " << myInt << std::endl;
+    std::cout << "Float: " << myFloat << std::endl;
+    return 0;
+}
