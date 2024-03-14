@@ -1,0 +1,9 @@
+#include <iostream>
+
+int main() {
+    int intValue = 42;
+    float floatValue = intValue;
+    std::cout << "Integer value: " << intValue << std::endl;
+    std::cout << "Float value (after implicit conversion): " << floatValue << std::endl;
+    return 0;
+}
