@@ -1,0 +1,7 @@
+#include <iostream>
+
+int main() {
+    const int myConstInteger = 10;
+    std::cout << "Constant Integer: " << myConstInteger << std::endl;
+    return 0;
+}
