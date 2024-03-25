@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+
+int main() {
+    std::cout << "Enter a number: ";
+    int num;
+    std::cin >> num;
+
+    int originalNum = num;
+    int numDigits = 0;
+    int sum = 0;
+
+    int tempNum = num;
+    while (tempNum != 0) {
+        tempNum /= 10;
+        ++numDigits;
+    }
+
+    tempNum = num;
+    while (tempNum != 0) {
+        int digit = tempNum % 10;
+        sum += std::pow(digit, numDigits);
+        tempNum /= 10;
+    }
+
+    if (sum == originalNum) {
+        std::cout << originalNum << " is a Narcissistic number." << std::endl;
+    } else {
+        std::cout << originalNum << " is not a Narcissistic number." << std::endl;
+    }
+
+    return 0;
+}

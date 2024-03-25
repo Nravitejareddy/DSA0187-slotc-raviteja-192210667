@@ -1,0 +1,15 @@
+#include <iostream>
+
+int main() {
+    std::cout << "Enter a number: ";
+    int num;
+    std::cin >> num;
+
+    if (num % 7 == 0 || num % 10 == 7) {
+        std::cout << num << " is a Buzz number." << std::endl;
+    } else {
+        std::cout << num << " is not a Buzz number." << std::endl;
+    }
+
+    return 0;
+}
